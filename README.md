@@ -1,11 +1,23 @@
 # Pomoduino
 Pomoduino is an open-source project based on Arduino and ESP32 that combines the Pomodoro Technique with a customizable timer using LED, push buttons, and an OLED display. The project aims to provide an efficient and visually engaging timer for enhanced productivity and time management.
 
-# Architecture
+## Firmware Architecture
+Pomoduino Firmware architecture follows the Model-View-Controller (MVC) pattern, separating the user interface (View), data and logic (Model), and user input and control flow (Controller). See more details about system design [here](./doc/system_design.md).
+## Hardware Architecture
 
-Pomoduino is based on an ESP32, WS2812B LED, 2 push buttons for navigation, a Buzzer and a 128x64 I2C OLED display. 
+![Pomoduino Hardware Architecture](./assets/pomoduino_hardware_architcture.png)
 
-![Pomoduino](docs/pomoduino.jpg)
+- User Interface: The user interacts with the Pomoduino through the various hardware components.
+
+- ESP32: The ESP32 microcontroller serves as the main control unit for the Pomoduino. It manages the communication between different hardware components and controls their behavior.
+
+- Push Buttons: The push buttons are used for user input, allowing the user to navigate through menus, adjust settings, and control the timer.
+
+- WS2812B LED Strip: The WS2812B LED strip provides visual feedback by displaying different colors and patterns. It is used to indicate the timer status and session progression.
+
+- OLED Display: The OLED display shows relevant information such as the time remaining, session status, and configuration settings.
+
+This architecture represents the hardware components and their connections within the Pomoduino project. The ESP32 acts as the central control unit, coordinating the interaction between the push buttons, LED strip, and OLED display.
 
 ## Features
 
@@ -57,5 +69,4 @@ This project is licensed under the [MIT License](LICENSE).
 ## Acknowledgements
 
 - [Pomodoro Technique](https://francescocirillo.com/pages/pomodoro-technique)
-- [Adafruit Industries](https://www.adafruit.com/)
 
